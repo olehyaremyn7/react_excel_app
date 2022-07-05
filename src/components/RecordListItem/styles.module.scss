@@ -1,0 +1,32 @@
+@import "src/scss/_variables";
+@import "src/scss/_mixins";
+
+.Record {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+
+  &:hover {
+    background: $dashboard_list_hover_color;
+    border-radius: 1.563rem;
+  }
+}
+
+.Title {
+  font-size: 1rem;
+  text-decoration: none;
+  color: $dark_text_color;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.LastOpenDate {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: $dark_text_color;
+}

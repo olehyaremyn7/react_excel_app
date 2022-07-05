@@ -1,0 +1,62 @@
+@import "src/scss/_variables";
+@import "src/scss/_mixins";
+
+.CellInput {
+  flex: 0 0 100px;
+  height: 100%;
+  @include flexCenter();
+  padding: 1px;
+  background-color: $app_background_color;
+}
+
+.Input {
+  padding: 0 8px 0 10px;
+  color: $dark_text_color;
+  border: none;
+  border-radius: 2px;
+  height: 20px;
+  line-height: 22px;
+  outline: none;
+  width: 100%;
+  font-size: 0.875rem;
+
+  &:hover {
+    background-color: $cellInputHoverColor;
+  }
+
+  &:focus {
+    border: 2px solid $primary_color;
+    background-color: $app_background_color;
+  }
+}
+
+.Invalid {
+  &:focus {
+    border: 2px solid $warn_color;
+    background-color: $app_background_color;
+  }
+}
+
+.ValidationTooltip {
+  display: inline-block;
+  position: absolute;
+  padding: 10px;
+  top: 6px;
+  left: 3px;
+  background: $app_background_color;
+  color: $dark_text_color;
+  font-size: 0.9rem;
+  z-index: 10001;
+  border-radius: 0.2rem;
+  box-shadow: 0 4px 8px 3px rgb(60 64 67 / 15%);
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.2s ease;
+  cursor: auto;
+}
+
+.Active {
+  top: 26px;
+  opacity: 1;
+  transform: scale(1.0);
+}

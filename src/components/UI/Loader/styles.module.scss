@@ -1,0 +1,36 @@
+@import "src/scss/_variables";
+@import "src/scss/_mixins";
+
+.Loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 0;
+  display: grid;
+  grid-template-areas: 'stack';
+}
+
+.Dot {
+  @include blockSize(20px);
+  border-radius: 50%;
+  background-color: $success_color;
+  grid-area: stack;
+  animation: loader 1s linear infinite alternate-reverse;
+
+  &:nth-child(2) {
+    @include loader(333);
+  }
+
+  &:nth-child(3) {
+    @include loader(667);
+  }
+}
+
+@keyframes loader {
+  0% {
+    transform: translateX(35px);
+  }
+  100% {
+    transform: translateX(-35px);
+  }
+}

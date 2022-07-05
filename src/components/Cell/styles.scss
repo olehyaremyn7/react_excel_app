@@ -1,0 +1,22 @@
+@import "src/scss/_variables";
+@import "src/scss/_mixins";
+
+.cell {
+  min-width: $celColumnMinWidth;
+  padding: 5px;
+  width: $cell-width;
+  min-height: $celColumnMinHeight;
+  border: 1px solid $cellBorderColor;
+  @include cellColumnBorder();
+  color: $dark_text_color;
+  white-space: nowrap;
+  outline: none;
+  overflow: hidden;
+  font-size: 0.875rem;
+
+  &.selected {
+    border: none;
+    outline: 2px solid $primary-color;
+    z-index: 2;
+  }
+}

@@ -1,0 +1,35 @@
+@import "src/scss/_variables";
+@import "src/scss/_mixins";
+
+.column {
+  user-select: none;
+  @include flexCenter();
+  background-color: $columnRowInfoBackgroundColor;
+  min-width: $celColumnMinWidth;
+  width: $cell-width;
+  border: 1px solid $border-color;
+  height: 100%;
+  min-height: $celColumnMinHeight;
+  @include cellColumnBorder();
+  position: relative;
+
+  &.selected {
+    @include currentSelectedCellRowColumn();
+  }
+}
+
+.col-resize {
+  background: $primary-color;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  z-index: 1000;
+  top: 0;
+  width: 4px;
+
+  &:hover {
+    opacity: 1 !important;
+    cursor: col-resize;
+  }
+}

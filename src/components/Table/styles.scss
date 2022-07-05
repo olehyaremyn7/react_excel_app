@@ -1,0 +1,52 @@
+@import "src/scss/_variables";
+@import "src/scss/_mixins";
+
+.table {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: $header-height + $toolbar-height + $formula-height;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.row {
+  display: flex;
+  min-height: 20px;
+  height: $row-height;
+  user-select: none;
+}
+
+.row-info {
+  @include flexCenter();
+  min-width: $info-cell-width;
+  height: 100%;
+  border: 1px solid $border-color;
+  background-color: $columnRowInfoBackgroundColor;
+  border-top: none;
+  position: relative;
+
+  &.selected {
+    @include currentSelectedCellRowColumn();
+  }
+}
+
+.row-data {
+  display: flex;
+}
+
+.row-resize {
+  height: 4px;
+  left: 0;
+  background: $primary-color;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  z-index: 1000;
+
+  &:hover {
+    cursor: row-resize;
+    opacity: 1 !important;
+  }
+}

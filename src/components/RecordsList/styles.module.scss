@@ -1,0 +1,32 @@
+@import "src/scss/_variables";
+@import "src/scss/_mixins";
+
+.Table {
+  width: calc(100% - 800px);
+  padding: 1rem;
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  color: $dark_text_color;
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  padding: 0 12px;
+}
+
+.List {
+  @include clear-list;
+}
+
+.NoRecords {
+  margin-top: $header-height;
+
+  p {
+    font-size: 1.225rem;
+    background-color: $dashboard_list_hover_color;
+    padding: 1.1rem 1.6rem;
+    border-radius: 1.563rem;
+  }
+}

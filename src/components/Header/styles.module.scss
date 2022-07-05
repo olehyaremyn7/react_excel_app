@@ -1,0 +1,39 @@
+@import "src/scss/_variables";
+@import "src/scss/_mixins";
+
+.Header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: $header-height;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Input {
+  margin: 0;
+  padding: 10px 7px;
+  color: $dark_text_color;
+  border: 1px solid transparent;
+  border-radius: 0.125rem;
+  height: 20px;
+  font-size: 1.125rem;
+  line-height: 22px;
+  outline: none;
+  min-width: 1px;
+
+  &:hover {
+    border: 1px solid $border-color;
+  }
+
+  &:focus {
+    border: 2px solid $primary_color;
+  }
+}
+
+.Actions {
+  display: flex;
+}

@@ -1,0 +1,42 @@
+@import "src/scss/_variables";
+@import "src/scss/_mixins";
+
+.button {
+  user-select: none;
+  height: 24px;
+  min-width: 24px;
+  padding: 3px;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  color: $icon_button_color;
+  transition: background 0.25s;
+  border: none;
+  outline: none;
+  background: $app_background_color;
+  cursor: pointer;
+
+  &:hover {
+    background: $icon_button_hover_color;
+  }
+}
+
+.buttonIcon {
+  font-size: $icon_button_fz;
+}
+
+.primary {
+  @include iconButtonActiveState($primary_color);
+}
+
+.accent {
+  @include iconButtonActiveState($accent_color);
+}
+
+.success {
+  @include iconButtonActiveState($success_color);
+}
+
+.error {
+  @include iconButtonActiveState($warn_color);
+}

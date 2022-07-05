@@ -1,0 +1,39 @@
+@import "src/scss/_variables";
+@import "src/scss/_mixins";
+
+.FormulaBar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: $header-height + $toolbar-height;
+  height: $formula-height;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $border-color;
+}
+
+.Formula {
+  height: 100%;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.FX {
+  user-select: none;
+  font-size: 1.1rem;
+  font-style: italic;
+  text-align: center;
+  letter-spacing: 1px;
+  width: $info-cell-width;
+}
+
+.Input {
+  padding: 4px 10px;
+  font-size: 0.875rem;
+  outline: none;
+  border: none;
+  @include blockSize(100%);
+  color: $dark_text_color;
+}

@@ -1,0 +1,42 @@
+@import "src/scss/_variables";
+
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin iconButtonActiveState($color: $primary_color) {
+  &:active, &.active {
+    color: $color;
+  }
+}
+
+@mixin clear-list() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin square_size($size: 160px) {
+  @include blockSize($size);
+}
+
+@mixin blockSize($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin currentSelectedCellRowColumn() {
+  background: $selectedRowColumnColor !important;
+  color: $dark_color;
+}
+
+@mixin cellColumnBorder() {
+  border-top: none;
+  border-left: none;
+}
+
+@mixin loader($animDelay) {
+  animation-delay: $animDelay + ms;
+}
