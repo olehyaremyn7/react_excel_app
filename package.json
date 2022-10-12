@@ -68,7 +68,7 @@
   "bugs": {
       "url": "https://github.com/olehyaremyn7/react_excel_app/issues"
   },
-  "homepage": "https://github.com/olehyaremyn7/react_excel_app#readme",
+  "homepage": "https://react-excel-p4ybg136e-olehyaremyn7.vercel.app",
   "eslintConfig": {
     "extends": [
       "react-app"
