@@ -17,5 +17,5 @@ export const RESIZER_POSITION_VALUE = -5000;
 export const DEFAULT_CELL_WIDTH = 120;
 export const DEFAULT_CELL_HEIGHT = 24;
 export const DECISION_DELETE_TABLE_TEXT = 'Are you sure you want to delete this table?';
-export const DELAY = 200;
+export const DELAY = 250;
 export const DASHBOARD_PAGE_DOCUMENT_TITLE = 'Dashboard';
