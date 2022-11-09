@@ -32,6 +32,10 @@
     "sass": "^1.53.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/jest": "^29.2.2",
     "@types/node": "^18.0.1",
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.6",
@@ -46,19 +50,23 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-webpack-plugin": "^3.2.0",
+    "husky": "^8.0.2",
     "prettier": "^2.7.1",
     "typescript": "^4.7.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage --watchAll=false",
+    "test:hook": "yarn run test --silent --watchAll=false",
+    "test:watch": "jest --watch",
     "eject": "react-scripts eject",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "prettier:cli": "yarn prettier \"**/*.ts\" \"**/*.tsx\"",
     "prettier:check": "yarn run prettier:cli -l",
-    "prettier:fix": "yarn run prettier:cli --write"
+    "prettier:fix": "yarn run prettier:cli --write",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -66,12 +74,13 @@
   },
   "license": "MIT",
   "bugs": {
-      "url": "https://github.com/olehyaremyn7/react_excel_app/issues"
+    "url": "https://github.com/olehyaremyn7/react_excel_app/issues"
   },
   "homepage": "https://react-excel-p4ybg136e-olehyaremyn7.vercel.app",
   "eslintConfig": {
     "extends": [
-      "react-app"
+      "react-app",
+      "react-app/jest"
     ]
   },
   "browserslist": {
@@ -84,6 +93,12 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!src/index.tsx"
     ]
   }
 }
