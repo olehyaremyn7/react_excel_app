@@ -1,26 +1,29 @@
 {
   "name": "react-excel",
-  "description": "Excel application implemented using React JS",
   "version": "0.1.0",
+  "license": "MIT",
+  "description": "Excel application implemented using ReactJS",
+  "author": "Oleh Yaremyn <oleh_yaremyn@ukr.net>",
   "private": true,
+  "type": "module",
   "engines": {
     "node": "16.x",
     "npm": "8.x"
   },
-  "author": "Oleh Yaremyn <oleh_yaremyn@ukr.net>",
-  "keywords": [
-    "Excel",
-    "ReactJS",
-    "React Hooks",
-    "TypeScript",
-    "Redux Toolkit",
-    "React Router",
-    "React-Redux",
-    "ESLint",
-    "Prettier",
-    "Yarn",
-    "Sass"
-  ],
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --coverage --watchAll=false",
+    "test:hook": "yarn run test --silent --watchAll=false",
+    "test:watch": "jest --watch",
+    "eject": "react-scripts eject",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "prettier:cli": "yarn prettier \"**/*.ts\" \"**/*.tsx\"",
+    "prettier:check": "yarn run prettier:cli -l",
+    "prettier:fix": "yarn run prettier:cli --write",
+    "prepare": "husky install"
+  },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.3",
     "clsx": "1.2.0",
@@ -54,29 +57,6 @@
     "prettier": "^2.7.1",
     "typescript": "^4.7.4"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --coverage --watchAll=false",
-    "test:hook": "yarn run test --silent --watchAll=false",
-    "test:watch": "jest --watch",
-    "eject": "react-scripts eject",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
-    "prettier:cli": "yarn prettier \"**/*.ts\" \"**/*.tsx\"",
-    "prettier:check": "yarn run prettier:cli -l",
-    "prettier:fix": "yarn run prettier:cli --write",
-    "prepare": "husky install"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/olehyaremyn7/react_excel_app.git"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/olehyaremyn7/react_excel_app/issues"
-  },
-  "homepage": "https://react-excel-p4ybg136e-olehyaremyn7.vercel.app",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -100,5 +80,26 @@
       "src/**/*.{ts,tsx}",
       "!src/index.tsx"
     ]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olehyaremyn7/react_excel_app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/olehyaremyn7/react_excel_app/issues"
+  },
+  "homepage": "https://react-excel-p4ybg136e-olehyaremyn7.vercel.app",
+  "keywords": [
+    "Excel",
+    "ReactJS",
+    "React Hooks",
+    "TypeScript",
+    "Redux Toolkit",
+    "React Router",
+    "React-Redux",
+    "ESLint",
+    "Prettier",
+    "Yarn",
+    "Sass"
+  ]
 }
